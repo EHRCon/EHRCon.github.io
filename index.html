@@ -216,19 +216,16 @@
                    class="interpolation-image"
                    alt="Interpolate start reference image."/>
         <p></p>
-        <h2 class="title is-4">Findings</h2>
+        <h2 class="title is-4">Analysis</h2>
           <div class="content has-text-justified">
             <p>
-              1. Overall, the performance of agents remained below 40%, indicating that current LLMs are ineffective as conversational agents in complex, multi-party, long-term dialogues.
+              1. Table 2 indicates that using GPT-3.5 (0613) in a few-shot setting yields the highest scores. However, recall scores for baseline models fluctuate between 40-60%, demonstrating the task's complexity. The noted discrepancies between recall, precision, and intersection scores underscore the challenges in extracting entities from clinical notes.
             </p>
             <p>
-              2. API-based models generally outperformed open-source models under time constraints, demonstrating superior inference capabilities and faster response times.
+              2. Models such as Tulu2, Mixtral, and GPT-3.5 (0613) demonstrate significant improvements in few-shot scenarios, while Llama-3's performance remains consistent across zero-shot and few-shot settings. Notably, few-shot learning enhances Llama-3's capabilities in discharge summaries and physician notes but diminishes its effectiveness in nursing notes. This variation suggests that Llama-3 struggles with generalizing from in-context examples, especially in the more unstructured formats of nursing notes.
             </p>
             <p>
-              3. There was no significant performance difference among different model sizes under time constraints; sometimes smaller models outperformed larger ones. Without time limits, larger models performed better, with the larger open-source models matching the inference capabilities of API models.
-            </p>
-            <p>
-              4. Storing the entire session yielded better results compared to other methods due to more context retention.
+              3. The MIMIC-III and OMOP CDM databases organize the same clinical event data in different formats, with MIMIC-III utilizing multiple specific tables and OMOP CDM employing standardized tables for easier identification and search. Despite the simplified structure of OMOP CDM, which was expected to enhance performance, the actual performance of the MIMIC-OMOP integration was similar to or worse than MIMIC-III. This was attributed to the complexity of the entities within the MIMIC-OMOP database, which includes detailed and diverse information related to specific entity names, such as "Cipralex 10mg tablets (Sigma Pharmaceuticals Plc) 28 tablets", encompassing value, unit, and other related details all at once. Our findings underscore the necessity for developing a framework that can interact flexibly with the database to overcome these challenges in future research.
             </p>
           </div>
       </div>
