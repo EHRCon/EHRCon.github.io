@@ -133,13 +133,35 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/simfig1-1.png"
+      <img src="./static/images/figure1_new-1.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
       <h2 class="subtitle">
-        An overall process of DialSim. Gray speech bubbles indicate predetermined utterances from the script, and white speech bubbles indicate spontaneous questions asked during the simulation. Colored speech bubbles indicate the agent's responses to the questions. 
-    (Left) An unanswerable question. (Center) A question that references a specific time. (Right) A multi-hop question that requires understanding past sessions (i.e., the Left and Center boxes).
-      </h2>
+        Examples of consistent and inconsistent data between clinical notes and EHR tables: An inconsistent example (datetime) is when a clinical note records an HR (abbreviation for heart rate) of 167 on "2022-02-02" but the EHR table shows the same HR on "2022-02-06". A consistent example is when both the clinical note and the EHR table document the administration of Atorvastatin with matching drug name, dosage, and unit. Another example of inconsistency occurs when a clinical note mentions a hypertension diagnosis, but the EHR table lacks this information.      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/figure2_-1.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      <h2 class="subtitle">
+        Annotation process of EHRCon: The annotation process involves annotators reviewing clinical notes, identifying and classifying entities into Type 1 and Type 2, and extracting relevant information to generate and execute SQL queries. If the SQL queries yield no results, conditions (e.g., value or time) are masked to pinpoint where the inconsistency occurred. When annotators encounter corner cases, they update the labeling instructions through discussion. After all labeling is complete, a post-processing phase is conducted to ensure high-quality data.      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/figure3_-1.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      <h2 class="subtitle">
+        Overview of CheckEHR. The framework consists of eight distinct stages: Note Segmentation, Named Entity Recognition, Time Filtering, Table Identification, Pseudo Table Creation, Self-Correction, Value Reformatting, and Query Generation.      </h2>
     </div>
   </div>
 </section>
