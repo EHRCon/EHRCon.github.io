@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Real-Time Simulator for Evaluating Long-Term Dialogue Understanding of Conversational Agents.">
+  <meta name="keywords" content="DialSim, Dialogue Simiulator, Evaluating Long-Term Multi-Party Dialogue Understanding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DialSim: A Real-Time Simulator for Evaluating Long-Term Dialogue Understanding of Conversational Agents</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">DialSim: A Real-Time Simulator <br>for Evaluating Long-Term Dialogue Understanding of Conversational Agents</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://jiho283.github.io">Jiho Kim</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="">Woosog Chay</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/hyeonjihwang">Hyeonji Hwang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/daeunkyung/">Daeun Kyung</a><sup>1</sup>,
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/thschung">Hyunseung Chung</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://eunbyeol-cho.github.io">Eunbyeol Cho</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yohanjo.github.io">Yohan Jo</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://mp2893.com">Edward Choi</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>KAIST,</span>
+            <span class="author-block"><sup>2</sup>SNU</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2406.13144"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2406.13144"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/jiho283/Simulator"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1MhPlUFWuchVZ5E1NQDWfbT7_RW7ozbuk"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/simfig1-1.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      <h2 class="subtitle">
+        An overall process of DialSim. Gray speech bubbles indicate predetermined utterances from the script, and white speech bubbles indicate spontaneous questions asked during the simulation. Colored speech bubbles indicate the agent's responses to the questions. 
+    (Left) An unanswerable question. (Center) A question that references a specific time. (Right) A multi-hop question that requires understanding past sessions (i.e., the Left and Center boxes).
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">DialSim</h2>
+        <p>
+          DialSim places an agent in the role of the main character of a TV show, engaging it in an extensive conversation based on the show’s scripted content. During this conversation, the agent is evaluated for its ability to respond appropriately to spontaneous questions from other speakers within a predefined time limit (e.g., 1s / 3s / 5s). The agent should be able to answer questions based on the information from the past dialogue and acknowledge when it does not know the answer. DialSim simulates three different dialogue environments based on scripts from popular TV shows (i.e., Friends, The Big Bang Theory, and The Office), and it has the following four main features.
+        </p>
+        <div class="content has-text-justified">
+          <p></p>
+          <h2 class="title is-4">Four key features of DialSim</h2>
+          <p>
+            <b>Real-Time Simulator</b>: For a conversational agent to function effectively in real-time, the agent should be capable of updating its memory and generating responses on the fly. To evaluate this, DialSim measures the accuracy of responses within a predefined time limit. To the best of our knowledge, this is the first work that evaluates the performance of a conversational agent in a time-constrained environment.
+          </p>
+          <p>
+            <b>Evaluating Long-Term Multi-Party Dialogue Understanding</b>: DialSim includes multi-party dialogues with an average length of 350k tokens, making it the longest among existing long-term dialogue datasets. Throughout the simulation, the agent faces complex questions that demand comprehension and reasoning across several multi-party sessions, ensuring a thorough assessment of its understanding capabilities.
+          </p>
+          <p>
+            <b>Randomized Test</b>: In our simulator, there is an average of 1,300 sessions of conversations occurring over a period of 5 years as assumed in the corresponding TV show. For each session, a randomly picked character asks a question that is randomly sampled from an average of 1,000 candidates, at a random time.  This setup allows us to test whether an agent can respond appropriately in an unpredictable environment, resembling real-world settings. Additionally, since a random set of questions is given for each test, repeating the tests multiple times allows us to measure the agent's performance variability and reliability.
+          </p>
+          <p>
+            <b>Adversarial Test</b>: LLM-based agents are likely to have prior knowledge about these TV shows from the pre-training process. Since such agents can provide answers without referencing the actual dialogue history, it is crucial to ensure that the agent relies strictly on the history for its responses. To achieve this, we developed adversarial tests that modify character names in two specific ways: by swapping their names with each other (e.g., Joey &#8596; Monica) or by assigning new names to them (e.g., Joey &#8594; John). This approach ensures that the agent's responses depend strictly on the context of the dialogue history.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    
+  </div>
+</section>
+
+
+  
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <!-- Visual Effects. -->
+      <div class="column">
+        <h2 class="title is-3">Examples of Simulations</h2>
+        <h2 class="title is-4">Simulation: ChatGPT-3.5 with a time limit of 1 second</h2>
+        <div class="publication-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-PDfFWEnswQ?si=o-dvo7WY7UCb6lAD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+    </div>
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-4">Simulation: Mistral-7B-it with a time limit of 1 second</h2>
+        <div class="publication-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/qA18wAsIFxQ?si=sxOigQ7s0zcA8aqm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+  </div>
+</section>
+
+  
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">Question Generation Methods</h2>
+      <h2 class="title is-4">1) Question Generation based on Fan Quizzes</h2>
+      <img src="./static/images/figure2_rev-1.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      <h2 class="subtitle">
+        The overall process of question generation based on fan quizzes. First, we crawled fan quizzes from the web (1). Then, we applied filtering and revision processes to the crawled data (2-a, b). From this, we created secondary versions of the questions by adding dates to each (3-a). Then, we mapped each question to the scenes by determining whether it is answerable in that scene or not  (3-b). Finally, we applied character style transfer to make the questions more natural (4).
+      </h2>
+    </div>
+  </div>
+</section>
+
+  
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-4">2) Question Generation Based on a Temporal Knowledge Graph</h2>
+      <img src="./static/images/simfig3-1.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      <h2 class="subtitle">
+        The overall process of question generation based on the temporal knowledge graph. We first extracted quadruples and constructed a temporal knowledge graph (1). Then, we generated questions based on this and mapped each question to the sessions by determining whether it was answerable in that session or not, similar to fan quiz-based questions (2-1, 2-2). Character style transfer was performed afterwards (3).
+      </h2>
+    </div>
+  </div>
+</section>
+
+  
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">Experimental Results</h2>
+      <img src="./static/images/results.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      <p></p>
+      <h2 class="title is-4">Findings</h2>
+        <div class="content has-text-justified">
+          <p>
+            1. Overall, the performance of agents remained below 40%, indicating that current LLMs are ineffective as conversational agents in complex, multi-party, long-term dialogues.
+          </p>
+          <p>
+            2. API-based models generally outperformed open-source models under time constraints, demonstrating superior inference capabilities and faster response times.
+          </p>
+          <p>
+            3. There was no significant performance difference among different model sizes under time constraints; sometimes smaller models outperformed larger ones. Without time limits, larger models performed better, with the larger open-source models matching the inference capabilities of API models.
+          </p>
+          <p>
+            4. Storing the entire session yielded better results compared to other methods due to more context retention.
+          </p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <pre><code>@article{kim2024dialsim,
+  author    = {Kim, Jiho and Chay, Woosog and Hwang, Hyeonji and Kyung, Daeun and Chung, Hyunseung and Cho, Eunbyeol and Jo, Yohan and Choi, Edward},
+  title     = {DialSim: A Real-Time Simulator for Evaluating Long-Term Dialogue Understanding of Conversational Agents},
+  journal   = {arXiv preprint arXiv:2406.13144},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+  
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/jiho283" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website design borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
