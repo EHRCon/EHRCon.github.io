@@ -275,16 +275,16 @@
       <div class="column">
         <h2 class="title is-3">Analysis</h2>
         <p>
-          1. <br>The challenging nature of the task</br>: Table 2 indicates that using GPT-3.5 (0613) in a few-shot setting yields the highest scores. However, recall scores for baseline models fluctuate between 40-60%, demonstrating the task's complexity. 
+          1. <b>The challenging nature of the task</b>: Table 2 indicates that using GPT-3.5 (0613) in a few-shot setting yields the highest scores. However, recall scores for baseline models fluctuate between 40-60%, demonstrating the task's complexity. 
             This challenge is further underscored by the significant gaps between recall and intersection, and between precision and intersection. Such discrepancies indicate the difficulty of NER in our task.
         </p>
         <br>
         <p>
-          2. <br>Few-shot Vs. Zero-shot</br>: Models such as Tulu2, Mixtral, and GPT-3.5 (0613) demonstrate significant improvements in few-shot scenarios, while Llama-3's performance remains consistent across zero-shot and few-shot settings. Notably, few-shot learning enhances Llama-3's capabilities in discharge summaries and physician notes but diminishes its effectiveness in nursing notes. This variation suggests that Llama-3 struggles with generalizing from in-context examples, especially in the more unstructured formats of nursing notes.
+          2. <b>Few-shot Vs. Zero-shot</b>: Models such as Tulu2, Mixtral, and GPT-3.5 (0613) demonstrate significant improvements in few-shot scenarios, while Llama-3's performance remains consistent across zero-shot and few-shot settings. Notably, few-shot learning enhances Llama-3's capabilities in discharge summaries and physician notes but diminishes its effectiveness in nursing notes. This variation suggests that Llama-3 struggles with generalizing from in-context examples, especially in the more unstructured formats of nursing notes.
         </p>
         <br>
         <p>
-          3. <br>MIMIC-III Vs. MIMIC-OMOP</br>: The MIMIC-III and OMOP CDM databases organize the same clinical event data in different formats, with MIMIC-III utilizing multiple specific tables and OMOP CDM employing standardized tables for easier identification and search. Despite the simplified structure of OMOP CDM, which was expected to enhance performance, the actual performance of the MIMIC-OMOP integration was similar to or worse than MIMIC-III. This was attributed to the complexity of the entities within the MIMIC-OMOP database, which includes detailed and diverse information related to specific entity names, such as "Cipralex 10mg tablets (Sigma Pharmaceuticals Plc) 28 tablets", encompassing value, unit, and other related details all at once. Our findings underscore the necessity for developing a framework that can interact flexibly with the database to overcome these challenges in future research.
+          3. <b>MIMIC-III Vs. MIMIC-OMOP</b>: The MIMIC-III and OMOP CDM databases organize the same clinical event data in different formats, with MIMIC-III utilizing multiple specific tables and OMOP CDM employing standardized tables for easier identification and search. Despite the simplified structure of OMOP CDM, which was expected to enhance performance, the actual performance of the MIMIC-OMOP integration was similar to or worse than MIMIC-III. This was attributed to the complexity of the entities within the MIMIC-OMOP database, which includes detailed and diverse information related to specific entity names, such as "Cipralex 10mg tablets (Sigma Pharmaceuticals Plc) 28 tablets", encompassing value, unit, and other related details all at once. Our findings underscore the necessity for developing a framework that can interact flexibly with the database to overcome these challenges in future research.
         </p>
       </div>
     </div>
