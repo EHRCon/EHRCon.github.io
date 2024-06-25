@@ -175,7 +175,7 @@
 </section>
 
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column">
@@ -196,7 +196,8 @@
     
   </div>
 </section>
-  
+   -->
+
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -207,6 +208,18 @@
           approximately 40,000 ICU patients treated at Beth Israel Deaconess Medical Center between 2001 and 2012, encompassing both structured information and textual records. To enhance standardization,
           we also utilize the Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM) version of MIMIC-III. OMOP CDM, a publicly developed data standard designed to unify the
           format and content of observational data for efficient and reliable biomedical research.
+        </p>
+        <br>
+        <h2 class="title is-4">Why is EHRCon necessary and important?</h2>
+        <p>
+          EHRs consist of comprehensive digital data, including structured data (like medications and diagnoses) and clinical notes, 
+          which offer detailed patient insights. These elements are interconnected and crucial for diagnosis and treatment, with structured 
+          data allowing for easy data retrieval and clinical notes providing deeper context. However, inconsistencies often occur between 
+          these data forms due to issues like EHR interface design, which is more focused on administrative tasks, and errors made by 
+          overburdened practitioners. These discrepancies can endanger patient safety and lead to legal problems. Current methods for 
+          checking data consistency between tables and text are inadequate, as they typically handle simpler cases and are not scalable for 
+          complex EHR systems. To address this, a new task and dataset named EHRCon is proposed to verify consistency between clinical notes 
+          and large relational databases within EHRs, emphasizing the need for more robust, automated solutions.
         </p>
         <br>
         <h2 class="title is-4">How was EHRCon constructed?</h2>
@@ -227,7 +240,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column">
-        <h2 class="title is-3">CheckEHR: Framework for Checking Consistency between Unstructured Notes and Structured Tables</h2>
+        <h2 class="title is-3">CheckEHR</h2>
         <img src="./static/images/figure3_-1.png"
                    class="interpolation-image"
                    alt="Interpolate start reference image."/>
